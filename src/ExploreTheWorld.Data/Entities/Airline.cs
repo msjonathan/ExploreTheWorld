@@ -9,11 +9,11 @@ namespace ExploreTheWorld.Data.Entities
         public string Name { get; set; }
         public string Alias { get; set; }
         /// <summary>
-        /// 2-letter code
+        /// 3-letter code
         /// </summary>
         public string ITATA { get; set; }
         /// <summary>
-        /// 3-letter code
+        /// 4-letter code
         /// </summary>
         public string ICAO { get; set; }
         public Country CountryOfOrigin { get; set; }

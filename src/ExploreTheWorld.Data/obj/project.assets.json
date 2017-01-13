@@ -3477,10 +3477,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "c:\\users\\jonat_000\\documents\\visual studio 2017\\Projects\\ExploreTheWorld\\ExploreTheWorld.Data\\ExploreTheWorld.Data.csproj",
+      "projectUniqueName": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.Data\\ExploreTheWorld.Data.csproj",
       "projectName": "ExploreTheWorld.Data",
-      "projectPath": "c:\\users\\jonat_000\\documents\\visual studio 2017\\Projects\\ExploreTheWorld\\ExploreTheWorld.Data\\ExploreTheWorld.Data.csproj",
-      "outputPath": "c:\\users\\jonat_000\\documents\\visual studio 2017\\Projects\\ExploreTheWorld\\ExploreTheWorld.Data\\obj\\",
+      "projectPath": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.Data\\ExploreTheWorld.Data.csproj",
+      "outputPath": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.Data\\obj\\",
       "outputType": "NETCore",
       "originalTargetFrameworks": [
         "netstandard1.4"

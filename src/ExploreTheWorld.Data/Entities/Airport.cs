@@ -12,11 +12,11 @@ namespace ExploreTheWorld.Data.Entities
         public string Latitude { get; set; }
         public string Longitude { get; set; }
         /// <summary>
-        /// 2-letter code
+        /// 3-letter code
         /// </summary>
         public string ITATA { get; set; }
         /// <summary>
-        /// 3-letter code
+        /// 4-letter code
         /// </summary>
         public string ICAO { get; set; }
     }

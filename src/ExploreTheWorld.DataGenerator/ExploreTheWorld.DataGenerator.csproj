@@ -11,8 +11,17 @@
     <PackageReference Include="Microsoft.NETCore.App" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\airlines.dat" />
-    <None Include="Data\airports.dat" />
-    <None Include="Data\routes.dat" />
+    <Content Include="Data\airlines.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\airports.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\routes.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExploreTheWorld.Data\ExploreTheWorld.Data.csproj" />
   </ItemGroup>
 </Project>

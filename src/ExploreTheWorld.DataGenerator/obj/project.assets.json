@@ -2106,6 +2106,13 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "ExploreTheWorld.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        }
       }
     }
   },
@@ -6700,10 +6707,16 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "ExploreTheWorld.Data/1.0.0": {
+      "type": "project",
+      "path": "../ExploreTheWorld.Data/ExploreTheWorld.Data.csproj",
+      "msbuildProject": "../ExploreTheWorld.Data/ExploreTheWorld.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.0": [
+      "ExploreTheWorld.Data",
       "Microsoft.NETCore.App >= 1.0.1"
     ]
   },
@@ -6712,17 +6725,21 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "c:\\users\\jonat_000\\documents\\visual studio 2017\\Projects\\ExploreTheWorld\\ExploreTheWorld.DataGenerator\\ExploreTheWorld.DataGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.DataGenerator\\ExploreTheWorld.DataGenerator.csproj",
       "projectName": "ExploreTheWorld.DataGenerator",
-      "projectPath": "c:\\users\\jonat_000\\documents\\visual studio 2017\\Projects\\ExploreTheWorld\\ExploreTheWorld.DataGenerator\\ExploreTheWorld.DataGenerator.csproj",
-      "outputPath": "c:\\users\\jonat_000\\documents\\visual studio 2017\\Projects\\ExploreTheWorld\\ExploreTheWorld.DataGenerator\\obj\\",
+      "projectPath": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.DataGenerator\\ExploreTheWorld.DataGenerator.csproj",
+      "outputPath": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.DataGenerator\\obj\\",
       "outputType": "NETCore",
       "originalTargetFrameworks": [
         "netcoreapp1.0"
       ],
       "frameworks": {
         "netcoreapp1.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.Data\\ExploreTheWorld.Data.csproj": {
+              "projectPath": "C:\\Users\\jonat_000\\Documents\\GitHub\\ExploreTheWorld\\src\\ExploreTheWorld.Data\\ExploreTheWorld.Data.csproj"
+            }
+          }
         }
       }
     },
