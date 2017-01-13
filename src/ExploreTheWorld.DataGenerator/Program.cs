@@ -47,12 +47,12 @@ class Program
                     switch (data.Key)
                     {
                         case ExtractionType.Airport:
-                            var country = ParseCountry(Clean(splittedData[3]), countries);
+                            var airportCountry = ParseCountry(Clean(splittedData[3]), countries);
                             airports.Add(new Airport()
                             {
                                 Name = Clean(splittedData[1]),
                                 City = Clean(splittedData[2]),
-                                Country = country,
+                                Country = airportCountry,
                                 ITATA = Clean(splittedData[4]),
                                 ICAO = Clean(splittedData[5]),
                                 Latitude = Clean(splittedData[6]),
@@ -60,8 +60,28 @@ class Program
                             });
                             break;
                         case ExtractionType.Airline:
+                            var airlineCountry = ParseCountry(Clean(splittedData[6]), countries);
+                            airlines.Add(new Airline()
+                            {
+                               Name = Clean(splittedData[1]),
+                               Alias = Clean(splittedData[2]),
+                               ITATA = Clean(splittedData[3]),
+                               ICAO = Clean(splittedData[4]),
+                               CountryOfOrigin = airlineCountry
+                            });
                             break;
                         case ExtractionType.Route:
+                            var airlineCode = Clean(splittedData[0]);
+                            var sourceAirportCode = Clean(splittedData[2]);
+                            var destinationAirportCode = Clean(splittedData[4]);
+
+                            routes.Add(new Route()
+                            {
+                                Airline = SearchAirline(airlineCode, airlines),
+                                SourceAirport = SearchAirport(sourceAirportCode, airports),
+                                DestinationAirport = SearchAirport(destinationAirportCode, airports),
+                            });
+                             
                             break;
                         default:
                             throw new ArgumentException("Unknown extraction type.");
@@ -69,6 +89,17 @@ class Program
                 }
             }
         }
+    }
+
+    private static Airline SearchAirline(string airlineCode, List<Airline> airlines)
+    {
+        return airlines.FirstOrDefault(f => f.ICAO.Equals(airlineCode, StringComparison.OrdinalIgnoreCase) ||
+                                        f.ITATA.Equals(airlineCode, StringComparison.OrdinalIgnoreCase));
+    }
+    private static Airport SearchAirport(string airportCode, List<Airport> airports)
+    {
+        return airports.FirstOrDefault(f => f.ICAO.Equals(airportCode, StringComparison.OrdinalIgnoreCase) ||
+                                        f.ITATA.Equals(airportCode, StringComparison.OrdinalIgnoreCase));
     }
 
     private static string Clean(string rawData)
